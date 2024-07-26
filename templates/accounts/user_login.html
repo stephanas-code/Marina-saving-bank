@@ -1,0 +1,43 @@
+{% extends 'accounts/base-user.html' %}
+{% load static %}
+
+
+{% block title %}Banking System{% endblock %}
+
+{% block bodycontent %}
+{% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-2" role="alert">
+            <p class="font-bold">Error!</p>
+            <p class="block sm:inline">{{ error }}</p>
+        </div>
+    {% endfor %}
+{% endif %}
+<h1 class="font-mono font-bold text-3xl text-center pb-5 pt-10">Sign In</h1>
+<hr>
+<div class="w-full mt-10">
+    <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        {% csrf_token %}
+        <form class="uk-grid uk-form" method="post">
+            {% csrf_token %}   
+            {% for message in messages %}
+            <h5 align="center" style="color: red;">{{ message }}</h5>
+            {% endfor %}          
+                <div class="uk-margin-small uk-width-1-1 uk-inline">
+                    <span class="uk-form-icon uk-form-icon-flip fas fa-user fa-sm"></span>
+                    <input class="uk-input uk-border-rounded" name="username" id="username" value="" type="email" placeholder="Email">
+                </div>
+                <div class="uk-margin-small uk-width-1-1 uk-inline">
+                    <span class="uk-form-icon uk-form-icon-flip fas fa-lock fa-sm"></span>
+                    <input class="uk-input uk-border-rounded" name="password" id="password" value="" type="password" placeholder="Password">
+                </div>
+
+        <div class="flex items-center justify-between">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                Sign In
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+

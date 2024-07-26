@@ -1,0 +1,70 @@
+{% extends 'profiles/transfer_layout.html' %}
+{% load static %}
+{% block bodycontent %}
+
+
+
+  <main class="main-content  mt-0">
+    <section>
+      <div class="page-header min-vh-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column">
+              <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center" style="background-image: url('{% static "assets/img/illustrations/illustration-signup.jpg" %}'); background-size: cover;">
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
+              <div class="card card-plain">
+                <div class="card-header">
+                  <h4 class="font-weight-bolder">Interbank Transfer</h4>
+                  <p class="mb-0">Transfers may take sometime to process</p>
+                </div>
+                <div class="card-body">
+
+                  {% for message in messages %}
+
+                  <h5 align="center" style="color: red;">{{ message }}</h5>
+                  
+                  {% endfor %} 
+
+                  <form action="{ url 'profiles:money_transfer' }"  method="post">
+                    {% csrf_token %}
+                    <div class="input-group input-group-outline mb-3">
+                     <input type="text" class="form-control" name="enter_your_account_id"  placeholder='Enter account ID' center>
+                    </div>
+
+                    <div class="input-group input-group-outline mb-3">
+                     <input type="text" class="form-control" name="enter_the_destination_account_number"  placeholder='Enter destination account number' center>
+                    </div>
+
+                    <div class="input-group input-group-outline mb-3">
+                     <input type="text" class="form-control" name="enter_the_amount_to_be_transferred"  placeholder='Enter amount' center>                    
+                    </div>
+
+                    <div class="input-group input-group-outline mb-3">
+                    <input type="text" class="form-control" name="pin" style="-webkit-text-security: circle" placeholder='Enter pin' maxlength='4' center>
+                   </div>
+
+                    <div class="text-center">
+                      <button onclick="openForm()" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Enter Pin</button>
+                    </div>
+                  </form>                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}  
+
+{% block scriptcontent %}
+    <script>
+        $(".current").removeClass("current");
+        $("#transfer").addClass("current");
+
+        $("input").addClass("form-control");
+        $("label").prepend("<br>")
+    </script>
+{% endblock %}

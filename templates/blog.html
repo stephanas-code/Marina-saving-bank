@@ -1,0 +1,63 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block title %}
+Banking and investing
+{% endblock %}
+
+{% block bodycontent%}
+	<main data-title="blog">
+		<!-- blog content begin -->
+		<div class="uk-section uk-margin-top">
+			<div class="uk-container">
+				<div class="uk-grid" data-uk-grid>
+					<div class="uk-width-2-3@m">
+						<div class="in-blog-1">
+							<article class="uk-grid-small" data-uk-grid>
+								<div class="uk-width-1-5@s">
+									<span class="uk-label uk-border-pill">Investing</span>
+									<p class="uk-text-small uk-text-muted uk-margin-small-top uk-margin-small-bottom">By Warren Wong</p>
+									<p class="uk-text-small uk-text-muted uk-margin-small-top">December 29, 2022</p>
+								</div>
+								<div class="uk-width-expand">
+									<h2><a href="blog/the-typical-us-household-is-spending-445-more-a.html" class="uk-text-secondary uk-text-decoration-none">The typical U.S. household is spending $445 more a month due to inflation</a></h2>
+									<img class="in-img-featured" src="{% static 'home/img/user/image-featured-a4DfvV.jpg' %}" alt="The typical U.S. household is spending $445 more a month due to inflation">
+									<p>Inflation is causing American households to spend $445 more per month buying the same items they did a year ago, according to an estimate from Moody’s Analytics.</p>
+									<a href="blog/the-typical-us-household-is-spending-445-more-a.html" class="uk-button uk-button-text">Continue reading<i class="fas fa-chevron-right fa-xs uk-margin-small-left"></i></a>
+								</div>
+							</article>
+							<article class="uk-grid-small" data-uk-grid>
+								<div class="uk-width-1-5@s">
+									<span class="uk-label uk-border-pill">Politics</span>
+									<p class="uk-text-small uk-text-muted uk-margin-small-top uk-margin-small-bottom">By Warren Wong</p>
+									<p class="uk-text-small uk-text-muted uk-margin-small-top">December 29, 2022</p>
+								</div>
+								<div class="uk-width-expand">
+									<h2><a href="blog/biden-and-harris-celebrate-kwanzaa-in-social-media.html" class="uk-text-secondary uk-text-decoration-none">Biden and Harris celebrate Kwanzaa in social media posts</a></h2>
+									<p>The White House celebrated Kwanzaa in a pair of pre-recorded videos posted to Twitter on Monday, marking the seven-day non-denominational holiday aimed at honoring African Americans’ ancestral roots.</p>
+									<a href="blog/biden-and-harris-celebrate-kwanzaa-in-social-media.html" class="uk-button uk-button-text">Continue reading<i class="fas fa-chevron-right fa-xs uk-margin-small-left"></i></a>
+								</div>
+							</article>
+							<article class="uk-grid-small" data-uk-grid>
+								<div class="uk-width-1-5@s">
+									<span class="uk-label uk-border-pill">Technology</span>
+									<p class="uk-text-small uk-text-muted uk-margin-small-top uk-margin-small-bottom">By Warren Wong</p>
+									<p class="uk-text-small uk-text-muted uk-margin-small-top">December 29, 2022</p>
+								</div>
+								<div class="uk-width-expand">
+									<h2><a href="blog/amazons-started-to-deliver-orders-by-drones-in-california.html" class="uk-text-secondary uk-text-decoration-none">Amazon’s started to deliver orders by drones in California and Texas</a></h2>
+									<p>The retail giant already flew out some packages to customers in Northern California and a medium-sized Texan city in the run-up to Christmas.</p>
+									<a href="blog/amazons-started-to-deliver-orders-by-drones-in-california.html" class="uk-button uk-button-text">Continue reading<i class="fas fa-chevron-right fa-xs uk-margin-small-left"></i></a>
+								</div>
+							</article>
+						</div>
+						<!-- pagination begin -->
+						<ul class="uk-pagination uk-flex-center uk-margin-medium-top"></ul>
+						<!-- pagination end -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- blog content end -->
+	</main>
+	{% endblock %}

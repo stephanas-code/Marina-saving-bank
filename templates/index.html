@@ -1,0 +1,318 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block title %}
+
+Welcome to our online banking
+{% endblock %}
+{% block bodycontent%}
+<main>
+		<!-- slideshow content begin -->
+		<div class="uk-section uk-padding-remove-vertical">
+			<div class="in-slideshow" data-uk-slideshow>
+				<ul class="uk-slideshow-items">
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse">
+							<img src="https://bakerreign.co.uk/wp-content/uploads/2015/07/Baker-Banneredit2.jpg" data-src="https://bakerreign.co.uk/wp-content/uploads/2015/07/Baker-Banneredit2.jpg" alt="slideshow-image" data-uk-cover width="1920" height="500" data-uk-img>
+						</div>
+						<div class="uk-container">
+							<div class="uk-grid uk-flex uk-flex-center" data-uk-grid>
+								<div class="uk-width-3-4@m">
+									<div class="uk-overlay uk-text-center in-slide-position-2">
+										<h1 class="uk-margin-remove">Don't wait. Open an account today.</h1>
+										<p class="uk-text-lead uk-margin-small-top uk-margin-bottom uk-visible@m">Get up to $600 plus 60 days of commission-free stocks and options trades</p>
+										<form class="uk-grid-small" action="{% url 'accounts:signup' %}" data-uk-grid>
+											<div class="uk-width-1-1 uk-width-1-4@m">
+												<input class="uk-input uk-border-rounded" type="text" placeholder="Full name">
+											</div>
+											<div class="uk-width-1-1 uk-width-1-4@m">
+												<input class="uk-input uk-border-rounded" type="text" placeholder="Email address">
+											</div>
+											<div class="uk-width-1-1 uk-width-1-4@m">
+												<input class="uk-input uk-border-rounded" type="text" placeholder="Phone number">
+											</div>
+											<div class="uk-width-1-1 uk-width-1-4@m">
+												<button class="uk-button uk-button-secondary uk-border-rounded uk-width-expand">Create Account</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse">
+							<img src="https://www.thecompleteuniversityguide.co.uk/commimg-cug/myhotcourses/institution/profile/video/myhc_324111_728px.jpg" data-src="https://www.thecompleteuniversityguide.co.uk/commimg-cug/myhotcourses/institution/profile/video/myhc_324111_728px.jpg" alt="slideshow-image" data-uk-cover width="1920" height="500" data-uk-img>
+						</div>
+						<div class="uk-container">
+							<div class="uk-grid" data-uk-grid>
+								<div class="uk-width-3-5@m">
+									<div class="uk-overlay in-slide-position-1">
+										<h1 class="uk-margin-remove">Made Over $10,000 Overnight</h1>
+										<p class="uk-text-lead uk-margin-small-top uk-margin-bottom uk-visible@m">"I’ve always believed that to be successful you have to find someone that’s successful, do what they do to get the same results"</p>
+										<span class="uk-label uk-label-success uk-border-pill uk-text-uppercase">Jonathan Larson - Client since June 2012</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="uk-position-cover uk-animation-kenburns uk-animation-reverse">
+							<img src="https://www.unb.ca/fredericton/management/_assets/images/inline-cfs-finance.jpg" data-src="https://www.unb.ca/fredericton/management/_assets/images/inline-cfs-finance.jpg" alt="slideshow-image" data-uk-cover width="1920" height="500" data-uk-img>
+						</div>
+						<div class="uk-container">
+							<div class="uk-grid" data-uk-grid>
+								<div class="uk-width-3-5@m">
+									<div class="uk-overlay in-slide-position-1">
+										<h1 class="uk-margin-remove">Modern investment advice means having better choices.</h1>
+										<p class="uk-text-lead uk-margin-small-top uk-margin-medium-bottom uk-visible@m">You do life, we do investing</p>
+										<a href="{% url 'markets' %}" class="uk-button uk-button-primary uk-border-rounded uk-visible@m">Learn more</a>
+										<a href="{% url 'accounts:signup' %}" class="uk-button uk-button-secondary uk-border-rounded uk-visible@m uk-margin-small-left">Create account</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="uk-container">
+					<ul class="uk-slideshow-nav uk-dotnav uk-position-bottom-center"></ul>
+				</div>
+			</div>
+		</div>
+		<!-- slideshow content end -->
+		<!-- section content begin -->
+		<div class="uk-section in-fina-6">
+			<div class="uk-container">
+				<div class="uk-grid" data-uk-grid>
+					<div class="uk-width-1-1">
+						<div class="uk-card uk-card-default uk-card-body uk-box-shadow-small uk-border-rounded">
+							<h2>Trade stocks on our Intuitive,<br>easy-to-use and powerful platform</h2>
+							<div class="uk-child-width-1-1 uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid>
+								<div>
+									<p class="uk-margin-remove-top">Our award-winning platform gives you access to powerful technical charting & fundamental stock research tools. See for yourself how equity trading at Fina First Capital gives you some of the best technology and value you’ll find anywhere.</p>
+									<a class="uk-button uk-button-primary uk-border-rounded" href="{% url 'accounts:signup' %}">Open an Account</a>
+								</div>
+								<div>
+									<div class="uk-text-center in-fee-wrapper uk-margin-small-top">
+										<h3 class="uk-text-uppercase uk-margin-remove-bottom">stocks</h3>
+										<h1 class="uk-margin-remove-top">
+											<span class="in-currency">$</span><span class="in-fee">4</span>95
+										</h1>
+										<p class="uk-margin-remove-top uk-margin-remove-bottom">Flat-rate stocks</p>
+										<span class="uk-label uk-label-warning uk-text-uppercase uk-margin-small-top">Other fee may apply</span>
+									</div>
+								</div>
+								<div class="uk-visible@m">
+									<img class="in-mockup" src="{% static 'home/img/in-lazy.gif' %}" data-src="{% static 'home/img/in-fina-6-img.png' %}" alt="mockup" width="346" height="255" data-uk-img>
+									<div class="uk-flex uk-flex-middle">
+										<div>
+											<h5 class="uk-text-muted uk-text-uppercase uk-margin-remove">Best Online Brokers</h5>
+											<div class="in-ratings uk-margin-remove uk-float-right">
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star"></i>
+												<i class="fas fa-star-half"></i>
+												2019
+											</div>
+										</div>
+										<div class="uk-margin-small-left">
+											
+											<img class="in-offset-top-10" src="{% static 'home/img/in-lazy.gif' %}" data-src="{% static 'home/img/in-fina-1-award-1.png' %}" alt="awards" width="143" height="33" data-uk-img>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section content end -->
+		<!-- section content begin -->
+		<div class="uk-section in-fina-7 in-offset-top-30">
+			<div class="uk-container">
+				<div class="uk-grid uk-grid-large uk-flex uk-flex-middle" data-uk-grid>
+					<div class="uk-width-1-2@m">
+						<h2 class="uk-margin-remove">Trade & Invest in Stocks, Currencies, Indices, and Commodities (CFDs).</h2>
+						<h2 class="uk-margin-small-top uk-text-light uk-margin-large-right">Investing in the world's most popular financial market has never been easier.</h2>
+						<a class="uk-button uk-button-default uk-border-rounded" href="{% url 'accounts:signup' %}">Start Banking</a>
+						<div class="uk-flex uk-flex-middle uk-margin-large-top">
+							<div class="in-icon-wrap large circle primary-color uk-margin-right">
+								<i class="fas fa-chart-line fa-2x"></i>
+							</div>
+							<div>
+								<h1 class="uk-margin-remove">324,978,126</h1>
+								<p class="uk-text-uppercase uk-text-muted uk-margin-remove">Trades Opened at Fina</p>
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-1-2@m">
+						<div class="uk-grid-small uk-child-width-1-3@s uk-child-width-1-2@m uk-margin-bottom" data-uk-grid>
+							<div class="uk-width-1-3@s uk-width-1-1@m">
+								<div class="uk-card uk-card-default uk-box-shadow-small">
+									<div class="uk-card-media-top uk-text-center">
+										<img src="https://th.bing.com/th/id/R.a3a23634ee5a03fb296543c0562d2cef?rik=9CCCV%2bh3nHCPXg&riu=http%3a%2f%2fs.thestreet.com%2ffiles%2ftsc%2fv2008%2fphotos%2fcontrib%2fuploads%2fmicrosoft-ces-2009.jpg&ehk=nBLSpZitHsaDTHrdDmXkbuTxMD22LUsad%2f7vEwKyls4%3d&risl=&pid=ImgRaw&r=0" data-src="https://th.bing.com/th/id/R.a3a23634ee5a03fb296543c0562d2cef?rik=9CCCV%2bh3nHCPXg&riu=http%3a%2f%2fs.thestreet.com%2ffiles%2ftsc%2fv2008%2fphotos%2fcontrib%2fuploads%2fmicrosoft-ces-2009.jpg&ehk=nBLSpZitHsaDTHrdDmXkbuTxMD22LUsad%2f7vEwKyls4%3d&risl=&pid=ImgRaw&r=0" alt="stock quote" width="553" height="278" data-uk-img>
+									</div>
+									<div class="uk-card-body">
+										<h6 class="uk-margin-remove">MSFT<span>Microsoft Corp</span></h6>
+										<p class="uk-margin-remove">64,21<span class="uk-text-danger">-0,72 (-1,11%)</span></p>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="uk-card uk-card-default uk-box-shadow-small">
+									<div class="uk-card-media-top uk-text-center">
+										<img src="https://th.bing.com/th/id/R.f011c79374473db25ebde68df2b28332?rik=qRU8IcbVwSdOVg&pid=ImgRaw&r=0" data-src="https://th.bing.com/th/id/R.f011c79374473db25ebde68df2b28332?rik=qRU8IcbVwSdOVg&pid=ImgRaw&r=0" alt="stock quote" width="268" height="135" data-uk-img>
+									</div>
+									<div class="uk-card-body">
+										<h6 class="uk-margin-remove">GOOGL<span>Alphabet Inc</span></h6>
+										<p class="uk-margin-remove">850,14<span class="uk-text-success">17,77 (2,05%)</span></p>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="uk-card uk-card-default uk-box-shadow-small">
+									<div class="uk-card-media-top uk-text-center">
+										<img src="https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2020/08/AAPL-has-doubled-value-in-21-weeks.jpg?w=2000&quality=82&strip=all&ssl=1" data-src="https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2020/08/AAPL-has-doubled-value-in-21-weeks.jpg?w=2000&quality=82&strip=all&ssl=1" alt="stock quote" width="268" height="135" data-uk-img>
+									</div>
+									<div class="uk-card-body">
+										<h6 class="uk-margin-remove">AAPL<span>Apple Inc</span></h6>
+										<p class="uk-margin-remove">139,85<span class="uk-text-success">1,61 (1,13%)</span></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section content end -->
+		<!-- section content begin -->
+		<div class="uk-section uk-section-primary in-fina-8 uk-padding-large">
+			<div class="uk-container">
+				<div class="uk-grid uk-flex uk-flex-center">
+					<div class="uk-width-1-1 uk-width-3-4@m uk-text-center">
+						<div class="uk-flex uk-flex-middle in-flex-responsive">
+							<div>
+								<div class="in-icon-wrap large circle uk-margin-medium-right">
+									<i class="fas fa-percent fa-4x"></i>
+								</div>
+							</div>
+							<div>
+								<h2 class="uk-text-center uk-margin-remove-top uk-margin-bottom">No Compromise Guarantee</h2>
+								<p class="uk-text-lead uk-margin-remove">We stand behind the performance of Fina Portfolios. If, after the first year, the performance of the model portfolio with the values
+									filter you select underperforms the corresponding base portfolio by one percentage point or more, we will refund 100% of your subscription fees.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section content end -->
+		<!-- section content begin -->
+		<div class="uk-section uk-section-primary in-fina-9 uk-padding-large uk-background-cover" style="background-image: url({% static 'home/img/in-fina-9-bg.jpg' %});" data-uk-parallax="bgy: -300">
+			<div class="uk-container">
+				<div class="uk-grid uk-flex uk-flex-center">
+					<div class="uk-width-3-5@m uk-text-center">
+						<div class="uk-flex uk-flex-middle">
+							<div>
+								<h2 class="uk-text-center uk-margin-remove-top uk-margin-medium-bottom">Invest with Fina Capital. Smart, responsible investing for just $9.95 per month.</h2>
+								<a class="uk-button uk-button-primary uk-border-rounded uk-margin-bottom" href="{% url 'accounts:signup' %}">Get started now</a>
+							</div>
+							<div class="uk-margin-medium-left uk-visible@m">
+								<div class="in-icon-wrap circle">
+									<h5>Open an account</h5>
+									<h3>Now</h3>
+									<h5>For free</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section content end -->
+		<!-- section content begin -->
+		<div class="uk-section in-fina-10">
+			<div class="uk-container">
+				<div class="uk-grid uk-grid-divider uk-child-width-1-3@m uk-child-width-1-2@s uk-margin-top uk-margin-bottom" data-uk-grid>
+					<div class="uk-width-1-3@m uk-width-1-1@s">
+						<img class="uk-float-left uk-margin-remove-adjacent uk-margin-right uk-margin-small-top uk-margin-large-bottom" src="{% static 'home/img/in-lazy.gif' %}" data-src="{% static 'home/img/in-fina-10-img.svg' %}" alt="images" width="82" height="142" data-uk-img>
+						<h3>What just happened. And what comes next.</h3>
+						<p>Get timely news & analysis from top publications and financial websites</p>
+						<a class="uk-button uk-button-primary uk-border-rounded" href="{% url 'about' %}">More Insights</a>
+					</div>
+					<div>
+						<article class="uk-article">
+							<h3 class="uk-margin-top uk-margin-remove-bottom">Investing for Income</h3>
+							<p class="uk-article-meta uk-text-uppercase uk-margin-small-top">Written by <a class="uk-text-muted" href="#">John Doe</a></p>
+							<p>Income investing is the practice of designing a portfolio of investments that will give you a passive income you can live on. Investments can include real estate, stocks, mutual funds, and bonds. It's crucial to consider which types of assets will enable you to meet your passive-income goals and investing philosophy while understanding some common dangers that can affect an income investing portfolio.</p>
+							
+						</article>
+					</div>
+					<div>
+						<article class="uk-article">
+							<h3 class="uk-margin-top uk-margin-remove-bottom">New to Online Investing</h3>
+							<p class="uk-article-meta uk-text-uppercase uk-margin-small-top">Written by <a class="uk-text-muted" href="#">Washington Morgan</a></p>
+							<p> It allows traders easy, cost-effective access to global financial markets  2. Online investments can provide many opportunities to make money as long as you do your research, focus your attention, and make smart decisions  3. Online investing can also benefit you in the long term by setting your money aside and watching it grow  4. There are numerous investment websites and platforms that offer different financial instruments like stocks, commodities, bonds, ETFs, and futures. Before getting started, it’s important to know what you’re looking for in an online trading platform and to ensure that the broker meets all of your investing needs and complies with all regulatory requirements
+							</p>
+							
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section content end -->
+		<!-- section content begin -->
+		<div class="uk-section uk-section-default in-fina-11 in-offset-bottom-40">
+			<div class="uk-container">
+				<div class="uk-grid-divider uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid>
+					<div class="uk-visible@m">
+						<div class="uk-grid uk-grid-medium">
+							<div class="uk-width-1-2">
+								<span class="fina-line-chart">45,48,46,48,58,65,64,58,51,56,53,64,62,63,64,64,76,78,80,96,94,90,90,94,95,99,97,98,99,101,104,74,78,86,100,102,100,103,111,113,117,118,120,116,116,116,113,109,115,103,107,109,103,104,108,113,103,83</span>
+							</div>
+							<div class="uk-width-1-2">
+								<h3 class="uk-margin-remove-bottom">Stocks</h3>
+								<p class="uk-text-muted uk-margin-remove-top uk-margin-remove-bottom">Profit return</p>
+								<p class="uk-label uk-label-success">(+24%) per year</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-grid uk-grid-medium">
+							<div class="uk-width-1-2">
+								<span class="fina-line-chart">78,78,79,79,82,87,89,88,91,90,94,88,90,93,95,93,94,95,96,102,104,88,90,94,96,100,106,89,66,101,95,94,115,121,126,130,134,141,138,149,148,138,140,134,122,101,94,90,89,78,79,80,77,76,75,82,80,85,88,90</span>
+							</div>
+							<div class="uk-width-1-2">
+								<h3 class="uk-margin-remove-bottom">Forex</h3>
+								<p class="uk-text-muted uk-margin-remove-top uk-margin-remove-bottom">Profit return</p>
+								<p class="uk-label uk-label-success">(+26%) per year</p>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="uk-grid uk-grid-medium">
+							<div class="uk-width-1-2">
+								<span class="fina-line-chart">76,76,75,75,75,76,77,76,79,80,77,78,81,78,85,70,45,48,52,58,60,61,54,56,57,71,71,69,71,68,68,72,72,70,74,76,82,88,85,85,88,88,90,83,80,79,70,70,70,70,71,72,71,71,67,75,51,48,60,62,60,61,59,61,61,62,66</span>
+							</div>
+							<div class="uk-width-1-2">
+								<h3 class="uk-margin-remove-bottom">Commodities</h3>
+								<p class="uk-text-muted uk-margin-remove-top uk-margin-remove-bottom">Profit return</p>
+								<p class="uk-label uk-label-success">(+18%) per year</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="uk-grid">
+					<div class="uk-width-1-1 uk-text-center">
+						<p class="uk-text-small uk-text-muted"><span class="uk-text-uppercase">Data from Fina Capital Research 3/24/2023</span><br>Performance is not an indication of futures results</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section content end -->
+	</main>
+	{% endblock %}
+	
